@@ -11,31 +11,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /********************************************Containers **************************************/
-
 .container-fluid, .container {
   padding: 5% 15%;
 }
 
-/************************************************** Phone **********************************/
-#phone .container-fluid {
-  padding: 0 0;
-}
-
-#phone .phone p {
-  padding: 0 25px 0 0;
-  text-align: right;
-  margin-bottom: 0px;
-  font-size: 1rem;
-  font-family: 'Montserrat-light';
-  background-color: #000080;
-  color: #fff;
-  /* color: #414141; */
-}
-
 /*************************************************** Nav bar ********************************/
-#nav {
-  /* background-color: rgba(135,167,166,0.97); */
+.nav-container {
+  background-color: #e7e8e2;
+
 }
+
+
 .navbar {
   padding: 0 0;
 }
@@ -46,8 +32,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.4rem;
   font-weight: bold;
   color: #414141;
+}
 
-
+.title {
+  padding-left: 5px;
 }
 
 .navbar-item {
@@ -55,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-item:hover {
-  background-color:#D3D3D3;
+  background-color: #D3D3D3;
   border-radius: 5px;
 }
 
@@ -76,11 +64,37 @@ h1, h2, h3, h4, h5, h6 {
   /* font-weight: bold; */
   color: #414141;
 }
+
 #nav .nav-link:hover {
   color: white;
 }
 
+/************************************************** Phone **********************************/
+.phone-line {
+  padding: 0;
+  border: none;
+  /* border-top: medium double #414141; */
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  color: #333;
+  text-align: center;
+  margin: 19px 0;
 
+}
+
+.phone-line:after {
+  content: "Phone: 02 6662 1259";
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 0 0.25em;
+  background: #f4fef4;
+}
 
 
 /********************************* Features section *******************************************/
@@ -95,11 +109,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
 }
 
-#features  .feature-box {
+#features .feature-box {
   padding: 5%;
 }
 
-#features  .features-icon {
+#features .features-icon {
   width: 25%;
   margin-bottom: 1rem;
 }
@@ -108,12 +122,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #414141;
 }
 
-
 /*************************************** Services Section  **********************************/
-#services, #contact {
+#services {
   padding: 50px 100px;
   text-align: center;
-  background: #e7e8e2;
+  background-color: #e7e8e2;
+}
+#services .container-fluid {
+ padding: 3% 1%;
 }
 
 .price-text {
@@ -123,24 +139,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .pricing-column {
   padding: 3% 2%;
-
 }
 
-
-.row .display-flex  {
+.row .display-flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-.row .display-flex > [class*='col-']  {
+.row .display-flex>[class*='col-'] {
   flex-grow: 1;
 }
 
-.card  {
+.card {
   height: 100%;
 }
-
-
 
 /*************************************** Products Section  **********************************/
 #products .img-responsive {
@@ -155,6 +167,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /****************************************** Contact Us Section ***********************************/
 
+#contact {
+  padding: 50px 100px;
+  text-align: center;
+  background-color: #f4fef4;
+}
+
+#contact .container-fluid {
+ padding: 3% 1%;
+}
+
+
+
 .contact-icon {
   color: #000000;
 }
@@ -167,17 +191,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
-
 .map {
   width: 100%;
   height: 400px;
   background-color: grey;
-
 }
 
 /************************************ Prices section ************************************/
 #prices {
-    background: #e7e8e2;
+  background: #e7e8e2;
 }
 
 .card-img-top {
@@ -194,27 +216,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**************************************** Prices - Carousels ********************************/
-
 .fa-angle-right, .fa-angle-left {
-
   color: #414141;
   font-size: 2.5rem;
 }
 
 .fa-angle-left {
   margin-right: 80%;
-
 }
 
 .fa-angle-right {
   margin-left: 80%;
 }
 
-
 /*************************************** Footer Section  **********************************/
 #footer {
-  background-color: rgba(135,167,166,0.97);
-
+  background-color: rgba(135, 167, 166, 0.97);
 }
 
 .footer-icon {
@@ -257,10 +274,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /***************************************Media break points ***************************/
 @media (max-width: 992px) {
-
   .navbar-brand {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
     width: 350px;
   }
@@ -270,136 +286,158 @@ h1, h2, h3, h4, h5, h6 {
     height: 25%;
     /* border: 0.25px solid #414141; */
   }
-
 }
-
-
 
 /* Make  more specific to price carousel */
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Show 4th slide on md if col-md-4*/
-    #prices .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -33.3333%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
+
+  /* Show 4th slide on md if col-md-4*/
+  #prices .carousel-inner .active.col-md-4.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    /*change this with javascript in the future*/
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
 }
+
 @media (min-width: 576px) and (max-width: 768px) {
-    /* Show 3rd slide on sm if col-sm-6*/
-    #prices .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -50%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
+
+  /* Show 3rd slide on sm if col-sm-6*/
+  #prices .carousel-inner .active.col-sm-6.carousel-item+.carousel-item+.carousel-item {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    /*change this with javascript in the future*/
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
 }
+
 @media (min-width: 576px) {
-    #prices .carousel-item {
-        margin-right: 0;
-    }
-    /* show 2 items */
-    #prices .carousel-inner .active + .carousel-item {
-        display: block;
-    }
-    #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left),
-    #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left) + .carousel-item {
-        transition: none;
-    }
-    #prices .carousel-inner .carousel-item-next {
-        position: relative;
-        transform: translate3d(0, 0, 0);
-    }
-    /* left or forward direction */
-    #prices .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-    #prices .carousel-item-next.carousel-item-left + .carousel-item,
-    #prices .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    /* farthest right hidden item must be also positioned for animations */
-    #prices .carousel-inner .carousel-item-prev.carousel-item-right {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    /* right or prev direction */
-    #prices .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-    #prices .carousel-item-prev.carousel-item-right + .carousel-item,
-    #prices .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
+  #prices .carousel-item {
+    margin-right: 0;
+  }
+
+  /* show 2 items */
+  #prices .carousel-inner .active+.carousel-item {
+    display: block;
+  }
+
+  #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left),
+  #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left)+.carousel-item {
+    transition: none;
+  }
+
+  #prices .carousel-inner .carousel-item-next {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* left or forward direction */
+  #prices .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+  #prices .carousel-item-next.carousel-item-left+.carousel-item,
+  #prices .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be also positioned for animations */
+  #prices .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  #prices .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+  #prices .carousel-item-prev.carousel-item-right+.carousel-item,
+  #prices .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
 }
+
 /* MD */
 @media (min-width: 768px) {
-    /* show 3rd of 3 item slide */
-    #prices .carousel-inner .active + .carousel-item + .carousel-item {
-        display: block;
-    }
-    #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left) + .carousel-item + .carousel-item {
-        transition: none;
-    }
-    #prices .carousel-inner .carousel-item-next {
-        position: relative;
-        transform: translate3d(0, 0, 0);
-    }
-    /* left or forward direction */
-    #prices .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    /* right or prev direction */
-    #prices .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
+
+  /* show 3rd of 3 item slide */
+  #prices .carousel-inner .active+.carousel-item+.carousel-item {
+    display: block;
+  }
+
+  #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left)+.carousel-item+.carousel-item {
+    transition: none;
+  }
+
+  #prices .carousel-inner .carousel-item-next {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* left or forward direction */
+  #prices .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  #prices .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
 }
+
 /* LG */
 @media (min-width: 991px) {
-    /* show 4th item */
-    #prices .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-        display: block;
-    }
-    #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-        transition: none;
-    }
-    /* Show 5th slide on lg if col-lg-3 */
-    #prices .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -25%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    /* left or forward direction */
-    #prices .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    /* right or prev direction //t - previous slide direction last item animation fix */
-    #prices .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + #prices .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
+
+  /* show 4th item */
+  #prices .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+    display: block;
+  }
+
+  #prices .carousel-inner .carousel-item.active:not(#prices .carousel-item-right):not(#prices .carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
+    transition: none;
+  }
+
+  /* Show 5th slide on lg if col-lg-3 */
+  #prices .carousel-inner .active.col-lg-3.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    /*change this with javascript in the future*/
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  #prices .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* right or prev direction //t - previous slide direction last item animation fix */
+  #prices .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+#prices .carousel-item+.carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
 }
