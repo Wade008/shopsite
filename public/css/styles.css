@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5% 15%;
 }
 
+#prices .container-fluid {
+  padding-bottom: 5px;
+}
+
 /*************************************************** Nav bar ********************************/
 .nav-container {
   background-color: #e7e8e2;
@@ -214,6 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 .scroll {
   margin: 0 auto;
 }
+
 
 /**************************************** Prices - Carousels ********************************/
 .fa-angle-right, .fa-angle-left {
